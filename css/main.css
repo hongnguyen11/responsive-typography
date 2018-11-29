@@ -21,11 +21,12 @@ html {
 }
 
 body {
-  margin: 0 1rem;
+  margin: 0;
 }
 
 article {
   max-width: 43em;
+  margin: 1rem;
 }
 
 article h1 {
@@ -35,15 +36,33 @@ article h1 {
 
 article header {
   border-bottom: 1px solid #999;
+  padding-bottom: .75rem;
 }
 
 article header p {
   font-style: italic;
   margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+}
+
+article p {
+  padding: .4em 0;
 }
 
 article > p:last-child {
   border-bottom: 1px solid #999;
+  padding-bottom: 1.25rem;
+}
+
+article > p:nth-child(3) {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+article > p:nth-child(6) {
+  margin-top: .25rem;
+  margin-bottom: .25rem;
 }
 
 article ol {
@@ -55,9 +74,76 @@ blockquote {
   max-width: 24em;
   color: #555;
   font-size: 1.125rem;
-  margin: .5rem 0;
+  margin: 0;
+}
+
+blockquote p {
+  margin: 0;
+  padding: 0;
 }
 
 .quote {
   color: #999;
+}
+
+@media only screen and (min-width: 38em) {
+
+  html {
+    font-size: 110%;
+    line-height: 1.4;
+  }
+
+  p {
+    padding-top: .5rem;
+  }
+
+  article > p:nth-child(6) {
+    margin-top: .25rem;
+    margin-bottom: .5rem;
+  }
+
+  article ol {
+    padding-top: .25rem;
+  }
+
+  article > p:last-child {
+    padding-top: .5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  blockquote {
+    margin-left: 3.25rem;
+  }
+
+  article header p {
+    padding-bottom: .75rem;
+  }
+
+}
+
+@media only screen and (min-width: 60em) {
+
+  html {
+    font-size: 120%;
+    line-height: 1.5;
+  }
+
+  article {
+    margin-left: 3rem;
+    margin-top: 2rem;
+  }
+
+}
+
+@media only screen and (min-width: 90em) {
+
+  html {
+    font-size: 130%;
+  }
+
+  article {
+    margin-left: 14rem;
+    margin-top: 2rem;
+  }
+
 }
